@@ -26,4 +26,13 @@ function kidsWithCandies(candies, extraCandies){
 }
 
 
-console.log(kidsWithCandies(candies, extraCandies))
+// shortes way I can think of
+function kidsWithCandies2(candies, extraCandies){
+
+   maxCandies = Math.max(...candies);
+   return candies.map((candie) => candie + extraCandies >= maxCandies)
+}
+
+
+
+console.log(kidsWithCandies2(candies, extraCandies))
