@@ -4,7 +4,7 @@ const target = -2
 
 function countPairs (nums, target){
     // Time complexity: O(n^2)
-    // Space Complexity: O(n^2) (many variables declared, using a lot more memory)
+    // Space Complexity: O(n^2)
     let indexes = []
     let startingPointer = 0;
     let nextPointer = 1;
