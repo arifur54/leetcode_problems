@@ -1,5 +1,5 @@
 const hours = [1, 2, 3, 4, 5]
-target = 2
+const target = 2
 
 
 function numberOfEmployeesWhoMetTarget(hours, target){
