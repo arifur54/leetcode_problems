@@ -1,4 +1,4 @@
-const hours = [1, 2, 3, 4, 5]
+const hours = [0, 1, 2, 3, 4]
 const target = 2
 
 
