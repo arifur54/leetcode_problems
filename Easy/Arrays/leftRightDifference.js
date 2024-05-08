@@ -27,6 +27,29 @@ function leftRightDifference(nums) {
     return result
 } 
         
+function leftRightDifference2(nums){
+    let n = nums.length
+    const totalSum = nums.reduce((acc, currentVal) => {
+        return acc + currentVal
+    }) 
+    const result = new Array(n)
+    
+    leftSum = 0
+    rightSum = totalSum
 
-console.log(leftRightDifference(nums))
+    for(let i = 0; i < n; i++){
+        result[i] = Math.abs(leftSum - rightSum)
+        leftSum += nums[i]
+
+        if(i < (n-1)){
+            rightSum -= nums[i + 1]
+        }
+    }
+
+    return result;
+
+}
+
+
+console.log(leftRightDifference2(nums))
     
