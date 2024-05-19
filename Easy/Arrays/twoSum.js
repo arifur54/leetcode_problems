@@ -1,4 +1,4 @@
-nums = [3,2,4]
+nums = [2,7,11,15]
 target = 6
 
 function twoSum(nums, target) {
@@ -28,5 +28,18 @@ function twoSum2(nums, target){
     }
 }
 
-// console.log(twoSum(nums, target))
-console.log(twoSum2(nums, target))
+function twoSumSlidingWindow(nums, target) {
+    // Use a sliding window of size 2
+    for (let i = 0; i < nums.length - 1; i++) {
+        // The window contains the elements nums[i] and nums[i + 1]
+        if (nums[i] + nums[i + 1] === target) {
+            return [i, i + 1];
+        }
+    }
+    return [];
+}
+
+// // console.log(twoSum(nums, target))
+// console.log(twoSum2(nums, target))
+
+console.log(twoSumSlidingWindow(nums, target))
