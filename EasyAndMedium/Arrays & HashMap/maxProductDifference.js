@@ -1,4 +1,4 @@
-// LeetCode Question #: 1913
+// // LeetCode Question #: 1913
 
 nums = [5,6,2,7,4]
 
@@ -8,5 +8,3 @@ function maxProductDifference(nums) {
 }
 
 console.log(maxProductDifference(nums));
-   
-  

@@ -1,23 +1,22 @@
 
-// LeetCode Question #: 347
-nums = [4,1,-1,2,-1,2,3], k = 2
-function topKFrequent(nums, k) {
-    let numMap = {};
-    for(let num of nums){
-        if(numMap[num] === undefined){
-            numMap[num] = 1
+// LeetCode Question #: 692
+
+
+words = ["the","day","is","sunny","the","the","the","sunny","is","is"], k = 4
+function topKfrequent(words, k) {
+    let wordMap = {};
+    sortedWord = words.sort();
+    for(let word of words){
+        if(!wordMap[word]){
+            wordMap[word] = 1;
         }else{
-            numMap[num]++;
+            wordMap[word]++
         }
     }
-
-    // let sortedVaues = Object.entries(numMap).sort((a, b) => a[1] - b[1])
-    // Second
-    let sortedPairs = Object.entries(numMap).sort((a, b) => b[1] - a[1]);
-    let topKeys = sortedPairs.slice(0, k).map(pair => parseInt(pair[0]));
     
-   return topKeys;
+    let freq = Object.entries(wordMap).sort((a,b) => b[1]-a[1]).map(pair => pair[0]).slice(0, k);
+    return freq;
 }
 
-console.log(topKFrequent(nums, k));
+console.log(topKfrequent(words, k));
 

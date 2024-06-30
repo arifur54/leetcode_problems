@@ -15,14 +15,21 @@ function twoSum(nums, target) {
 }
 
 function twoSum2(nums, target){
+    // Initialize a new Map to store the numbers and their indices
     let bucket = new Map()
+    
+    // Iterate through the array of numbers
     for(let i = 0; i < nums.length; i++){
+        // Calculate the number needed to reach the target sum
         let num_to_find = target - nums[i];
 
+        // Check if the needed number is already in the Map
         if(bucket.has(num_to_find)){
+            // If found, return the indices of the two numbers that add up to the target
             return [bucket.get(num_to_find), i]
         }
 
+        // If not found, add the current number and its index to the Map
         bucket.set(nums[i], i)
     }
 }
